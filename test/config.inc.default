@@ -1,0 +1,6 @@
+<%
+
+Const APIKEY = ""
+Const SECRETKEY = ""
+
+%>
