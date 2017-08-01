@@ -3,9 +3,9 @@
 <!--#include file="HepsiPayRequest.asp"-->
 <%
 
-Const HEPSIPAY_PAY_ADDRESS = "http://apientgr.hepsipay.com/payments/pay"
-Const HEPSIPAY_3D_PAY_ADDRESS = "http://entgr.hepsipay.com/payment/threedsecure"
-Const HEPSIPAY_REFUND_ADDRESS = "http://apientgr.hepsipay.com/payments/refund"
+Const HEPSIPAY_PAY_ADDRESS = "https://apientgr.hepsipay.com/payments/pay"
+Const HEPSIPAY_3D_PAY_ADDRESS = "https://entgr.hepsipay.com/payment/threedsecure"
+Const HEPSIPAY_REFUND_ADDRESS = "https://apientgr.hepsipay.com/payments/refund"
 
 Class cHepsiPAY
 	
@@ -54,8 +54,6 @@ Class cHepsiPAY
 		Set pFormCreator = Nothing
 		Response.Write "<h3>Ýþleminiz Gerçekleþtiriliyor. Lütfen bekleyiniz</h3>"
 		Response.Write pFormStr
-		Response.Flush
-		Response.End
 	End Sub
 	
 	' Pay Response
