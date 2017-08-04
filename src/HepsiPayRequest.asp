@@ -20,7 +20,7 @@ Class cHepsiPayRequest
 	Private pAmount
 	Public Property Get Amount
 		Amount = pAmount
-		If (Not IsEmpty(Amount)) Then Amount = CInt(Replace(FormatNumber(Amount, 2, 0, 0, 0), ",", ""))
+		If (Not IsEmpty(Amount)) Then Amount = Int(Replace(FormatNumber(Amount, 2, 0, 0, 0), ",", ""))
 	End Property
 	Public Property Let Amount(value)
 		Dim typeNumber : typeNumber = VarType(value)
@@ -40,7 +40,7 @@ Class cHepsiPayRequest
 			If (InStr(value, ",") > 0) Then
 				pAmount = CDbl(value)
 			Else
-				pAmount = CInt(value)
+				pAmount = Int(value)
 			End If
 			Exit Property
 		ElseIf (typeNumber = 4 OR typeNumber = 5 OR typeNumber = 6) Then
